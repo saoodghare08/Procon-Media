@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procon Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .navbar-hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .navbar-visible {
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        /* Custom scrollbar styling for the carousel thumbnails */
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 4px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 2px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <div class="bg-cover bg-center h-min" style="background-image: url('/Images/bg1.jpg');">
+      <nav id="navbar" class="bg-gray-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+              <!-- Replace text with logo image -->
+              <a href="#">
+                <img src="/Images/logo.png" alt="Procon Media Logo" class="w-16 h-auto">
+              </a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a href="/index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="/Navbar/about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="/Navbar/gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="/Navbar/media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                <a href="#" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+              <button id="nav-toggle" class="bg-blue-500 text-white p-2 rounded-md focus:outline-none">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <a href="/index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
+          <a href="about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
+          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
+          <a href="media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Portfolio</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
+        </div>
+      </nav>
+
+      <!-- About Us Section -->
+      <div class="pt-16 pb-4 bg-white text-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
+            <div style="background-image: url('/Images/bg1.jpg');" class="bg-cover bg-gray-100 bg-center h-min">
+                <h1 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50 text-center">Event Gallery</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Carousel Section -->
+      <div class="pb-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8 flex items-center justify-between">
+                <div class="text-xl font-bold pl-5">Jaipur Leadership Award Summit & Business Networking Conference</div>
+                <div>
+                <button id="grid-view" class="carousel-button p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-th"></i>
+                  </button>
+                  <button id="carousel-view" class="carousel-button p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-images"></i>
+                  </button>
+                </div>
+              </div>
+
+         <!-- Grid View Section -->
+    <div id="grid-view-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+        <!-- Images will be injected here by JavaScript -->
+    </div>
+
+    <!-- Carousel Section -->
+    <div id="carousel" class=" hidden relative max-w-4xl mx-auto mt-8">
+        <div id="carousel-slides" class="carousel-slides flex overflow-hidden relative">
+            <!-- Slides will be injected here by JavaScript -->
+        </div>
+
+        <!-- Thumbnails -->
+        <div id="carousel-thumbnails" class="carousel-thumbnails flex overflow-x-auto mt-4 space-x-2 py-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <!-- Thumbnails will be injected here by JavaScript -->
+        </div>
+    </div>
+        </div>
+      </div>
+
+      <!-- LOGO AND SHORTCUT -->
+      <div class="py-16 bg-gray-900 text-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center mb-12">
+            <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+              <img src="logo.png" alt="Procon Media Logo" class="w-48 h-auto">
+            </div>
+            <div class="text-center md:text-left">
+              <p class="text-lg text-gray-300">
+                Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
+              </p>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col">
+              <h3 class="text-xl font-semibold text-blue-400 mb-4">Shortcuts</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-blue-500 hover-effect">About</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-blue-500 hover-effect">Services</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-blue-500 hover-effect">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-blue-500 hover-effect">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="flex flex-col">
+              <h3 class="text-xl font-semibold text-blue-400 mb-4">Office</h3>
+              <address class="text-gray-300 mb-6">
+                <p>JN4/9/7 Sector 9, Vashi</p>
+                <p>7021448655</p>
+                <p><a href="mailto:akshat@proconmedia.in" class="text-blue-500 hover:underline hover-effect">akshat@proconmedia.in</a></p>
+                <p><a href="mailto:arvind@proconmedia.in" class="text-blue-500 hover:underline hover-effect">arvind@proconmedia.in</a></p>
+              </address>
+              <div class="flex space-x-6">
+                <a href="#" class="text-blue-600 hover:text-blue-800 hover-effect" aria-label="Facebook">
+                  <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#" class="text-blue-400 hover:text-blue-600 hover-effect" aria-label="Twitter">
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-blue-700 hover:text-blue-900 hover-effect" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script>
+        // Toggle the mobile menu
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar visibility on scroll
+        const nav = document.getElementById('navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll <= 0) {
+                nav.classList.remove('navbar-hidden');
+                nav.classList.add('navbar-visible');
+            } else if (currentScroll > lastScrollTop) {
+                nav.classList.add('navbar-hidden');
+                nav.classList.remove('navbar-visible');
+            } else {
+                nav.classList.remove('navbar-hidden');
+                nav.classList.add('navbar-visible');
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // Carousel functionality
+        const slides = document.getElementById('carousel-slides');
+        // const prevBtn = document.getElementById('prev-slide');
+        // const nextBtn = document.getElementById('next-slide');
+        const carouselViewBtn = document.getElementById('carousel-view');
+        const gridViewBtn = document.getElementById('grid-view');
+        // const listViewBtn = document.getElementById('list-view');
+
+        let currentSlideIndex = 0;
+
+        function showSlide(index) {
+            const slidesCount = slides.children.length;
+            if (index >= slidesCount) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = slidesCount - 1;
+            else currentSlideIndex = index;
+
+            slides.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        }
+
+        // prevBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
+        // nextBtn.addEventListener('click', () => showSlide(currentSlideIndex + 1));
+        carouselViewBtn.addEventListener('click', () => {
+            document.getElementById('carousel').classList.remove('hidden');
+            document.getElementById('grid-view-container').classList.add('hidden');
+            // document.getElementById('list-view-container').classList.add('hidden');
+        });
+        gridViewBtn.addEventListener('click', () => {
+            document.getElementById('grid-view-container').classList.remove('hidden');
+            document.getElementById('carousel').classList.add('hidden');
+            // document.getElementById('list-view-container').classList.add('hidden');
+        });
+        // listViewBtn.addEventListener('click', () => {
+        //     document.getElementById('list-view-container').classList.remove('hidden');
+        //     document.getElementById('carousel').classList.add('hidden');
+        //     document.getElementById('grid-view-container').classList.add('hidden');
+        // });
+    
+         // JavaScript to manage carousel
+         document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                '/Images/Jaipur/DSC04259.JPG',
+                '/Images/Jaipur/DSC04268.JPG',
+                '/Images/Jaipur/DSC04272.JPG',
+                '/Images/Jaipur/DSC04277.JPG',
+                '/Images/Jaipur/DSC04281.JPG',
+                '/Images/Jaipur/DSC04295.JPG',
+                '/Images/Jaipur/DSC04332.JPG',
+                '/Images/Jaipur/DSC04350.JPG',
+                '/Images/Jaipur/DSC04359.JPG',
+                '/Images/Jaipur/DSC04438.JPG',
+                '/Images/Jaipur/DSC04496.JPG',
+                '/Images/Jaipur/DSC04521.JPG',
+                '/Images/Jaipur/DSC04535.JPG',
+                '/Images/Jaipur/DSC04559.JPG',
+                '/Images/Jaipur/DSC04572.JPG',
+                '/Images/Jaipur/DSC04577.JPG',
+                '/Images/Jaipur/DSC04579.JPG',
+                '/Images/Jaipur/DSC04581.JPG',
+                '/Images/Jaipur/DSC04585.JPG',
+                '/Images/Jaipur/DSC04592.JPG',
+                '/Images/Jaipur/DSC04597.JPG',
+                '/Images/Jaipur/DSC04599.JPG',
+                '/Images/Jaipur/DSC04603.JPG',
+                '/Images/Jaipur/DSC04611.JPG',
+                '/Images/Jaipur/DSC04615.JPG',
+                // Add more image URLs as needed
+            ];
+
+            const carouselSlides = document.getElementById('carousel-slides');
+            const carouselThumbnails = document.getElementById('carousel-thumbnails');
+            const gridViewContainer = document.getElementById('grid-view-container');
+
+            images.forEach((src, index) => {
+                // Create slide
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide flex justify-center items-center';
+                slide.innerHTML = `<img src="${src}" alt="Slide ${index + 1}" class="w-full max-w-3xl h-auto object-cover border-2 border-gray-300 rounded-lg">`;
+                carouselSlides.appendChild(slide);
+
+                // Create thumbnail
+                const thumbnail = document.createElement('button');
+                thumbnail.className = 'thumbnail-button flex-shrink-0 w-16 h-16 border border-gray-300 rounded-lg overflow-hidden';
+                thumbnail.dataset.slide = index;
+                thumbnail.innerHTML = `<img src="${src}" alt="Thumbnail ${index + 1}" class="w-full h-full object-cover">`;
+                carouselThumbnails.appendChild(thumbnail);
+
+                // Create grid image
+                const gridImage = document.createElement('div');
+                gridImage.className = 'relative group overflow-hidden rounded-lg border border-gray-300';
+                gridImage.innerHTML = `
+                    <img src="${src}" alt="Event ${index + 1} Image ${index + 1}" class="w-full h-auto object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <p class="text-white text-lg font-semibold">Event ${index + 1} Description</p>
+                    </div>
+                `;
+                gridViewContainer.appendChild(gridImage);
+            });
+
+            const slides = document.querySelectorAll('.carousel-slide');
+            const thumbnails = document.querySelectorAll('.thumbnail-button');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('hidden', i !== index);
+                });
+                thumbnails.forEach((thumb, i) => {
+                    thumb.classList.toggle('ring-2', i === index); // Add a ring to highlight the active thumbnail
+                    thumb.classList.toggle('ring-blue-500', i === index); // Change ring color
+                });
+                currentSlide = index;
+            }
+
+            // Initialize the carousel
+            showSlide(currentSlide);
+
+            // Add event listeners for thumbnail clicks
+            carouselThumbnails.addEventListener('click', (e) => {
+                if (e.target.closest('.thumbnail-button')) {
+                    const index = parseInt(e.target.closest('.thumbnail-button').dataset.slide);
+                    showSlide(index);
+                }
+            });
+
+            // Hide prev and next buttons
+            document.getElementById('prev-slide').style.display = 'none';
+            document.getElementById('next-slide').style.display = 'none';
+
+            // Show the grid view container (or hide it based on user interaction)
+            // You may need additional logic here to toggle between carousel and grid view
+        });
+
+    </script>
+</body>
+</html>
