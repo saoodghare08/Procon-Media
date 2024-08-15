@@ -65,22 +65,22 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
     
-    <div class="bg-cover bg-center h-min" style="background-image: url('/Images/bg1.jpg');">
+    <div class="bg-cover bg-center h-min">
       <nav id="navbar" class="bg-gray-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
               <!-- Replace text with logo image -->
-              <a href="#">
-                <img src="/Images/logo.png" alt="Procon Media Logo" class="w-16 h-auto">
+              <a href="../../index.html">
+                <img src="../../Images/logo.png" alt="Procon Media Logo" class="w-16 h-auto">
               </a>
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a href="/index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="/Navbar/about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="/Navbar/gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                <a href="/Navbar/media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                <a href="../../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="../../Navbar/about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="../../Navbar/gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="../../Navbar/media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
                 <a href="#" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
@@ -108,7 +108,7 @@
       <div class="pt-16 pb-4 bg-white text-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10">
-            <div style="background-image: url('/Images/bg1.jpg');" class="bg-cover bg-gray-100 bg-center h-min">
+            <div style="background-image: url('../../Images/bg1.jpg');" class="bg-cover bg-gray-100 bg-center h-min">
                 <h1 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50 text-center">Event Gallery</h1>
             </div>
           </div>
@@ -155,7 +155,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col md:flex-row items-center mb-12">
             <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-              <img src="logo.png" alt="Procon Media Logo" class="w-48 h-auto">
+              <img src="../../Images/logo.png" alt="Procon Media Logo" class="w-48 h-auto">
             </div>
             <div class="text-center md:text-left">
               <p class="text-lg text-gray-300">
@@ -269,27 +269,27 @@
          // JavaScript to manage carousel
          document.addEventListener('DOMContentLoaded', () => {
             const images = [
-                '/Images/Ahmedabad/1.JPG',
-                '/Images/Ahmedabad/2.JPG',
-                '/Images/Ahmedabad/3.JPG',
-                '/Images/Ahmedabad/4.JPG',
-                '/Images/Ahmedabad/5.JPG',
-                '/Images/Ahmedabad/6.JPG',
-                '/Images/Ahmedabad/7.JPG',
-                '/Images/Ahmedabad/8.JPG',
-                '/Images/Ahmedabad/9.JPG',
-                '/Images/Ahmedabad/10.JPG',
-                '/Images/Ahmedabad/11.JPG',
-                '/Images/Ahmedabad/12.JPG',
-                '/Images/Ahmedabad/13.JPG',
-                '/Images/Ahmedabad/14.JPG',
-                '/Images/Ahmedabad/15.JPG',
-                '/Images/Ahmedabad/16.JPG',
-                '/Images/Ahmedabad/17.JPG',
-                '/Images/Ahmedabad/18.JPG',
-                '/Images/Ahmedabad/19.JPG',
-                '/Images/Ahmedabad/20.JPG',
-                '/Images/Ahmedabad/21.JPG',
+                '../../Images/Ahmedabad/1.JPG',
+                '../../Images/Ahmedabad/2.JPG',
+                '../../Images/Ahmedabad/3.JPG',
+                '../../Images/Ahmedabad/4.JPG',
+                '../../Images/Ahmedabad/5.JPG',
+                '../../Images/Ahmedabad/6.JPG',
+                '../../Images/Ahmedabad/7.JPG',
+                '../../Images/Ahmedabad/8.JPG',
+                '../../Images/Ahmedabad/9.JPG',
+                '../../Images/Ahmedabad/10.JPG',
+                '../../Images/Ahmedabad/11.JPG',
+                '../../Images/Ahmedabad/12.JPG',
+                '../../Images/Ahmedabad/13.JPG',
+                '../../Images/Ahmedabad/14.JPG',
+                '../../Images/Ahmedabad/15.JPG',
+                '../../Images/Ahmedabad/16.JPG',
+                '../../Images/Ahmedabad/17.JPG',
+                '../../Images/Ahmedabad/18.JPG',
+                '../../Images/Ahmedabad/19.JPG',
+                '../../Images/Ahmedabad/20.JPG',
+                '../../Images/Ahmedabad/21.JPG',
                 // Add more image URLs as needed
             ];
 
@@ -317,7 +317,7 @@
                 gridImage.innerHTML = `
                     <img src="${src}" alt="Event ${index + 1} Image ${index + 1}" class="w-full h-auto object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                        <p class="text-white text-lg font-semibold">Event ${index + 1} Description</p>
+                        <p class="text-white text-lg font-semibold">Ahmedabad Event ${index + 1}</p>
                     </div>
                 `;
                 gridViewContainer.appendChild(gridImage);
