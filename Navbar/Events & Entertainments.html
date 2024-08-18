@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
     <title>Procon Media</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
       .hover-effect:hover {
@@ -23,39 +23,10 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
     </style>
-     <style>
-        /* Custom styles for gallery hover effect */
-        .event-cover {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .event-cover:hover {
-            transform: scale(1.05);
-        }
-
-        .event-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .event-cover:hover .event-info {
-            transform: translateY(0);
-        }
-    </style>
   </head>
   <body class="bg-blue-100 text-gray-900">
     
-    <div class="bg-cover bg-center h-min" style="background-image: url('/Images/bg1.jpg');">
+    <div class="bg-cover bg-center h-min" style="background-image: url('Images/bg1.jpg');">
       <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
@@ -96,86 +67,37 @@
         </div>
       </nav>
 
-      <!-- About Us Section -->
-  <div class="pt-16 pb-4 bg-white text-gray-900">
+  <!-- About Us Overview Section -->
+  <div class="pt-16 pb-8 bg-blue-100 text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-            <h1 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50 text-center">Event Gallery</h1>
+          <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Events & Entertainments</h2>
         </div>
+        <!-- <p class="text-xl pt-10 text-gray-700 leading-relaxed">
+          Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
+        </p> -->
       </div>
     </div>
   </div>
 
-   <!-- Gallery Section -->
-   <div class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Event Cover 1 Rajasthan -->
-            <div class="event-cover relative">
-                <img src="../Images/Rajasthan/cover.JPG" alt="Rajasthan Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Rajasthan Real Estate, Architecture, Corporate Leadership Conference & Award</h2>
-                    <p>19th July 2024</p>
-                </div>
-                <a href="../Navbar/Events/Rajasthan.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Event Cover 2 Mumbai -->
-            <div class="event-cover relative">
-                <img src="../Images/Mumbai/cover.JPG" alt="Mumbai Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Mumbai Workplace & Facility Management Conclave & Awards</h2>
-                    <p>3rd may 2024</p>
-                </div>
-                <a href="../Navbar/Events/Mumbai.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Event Cover 3 Chandigarh -->
-            <div class="event-cover relative">
-                <img src="../Images/Chandigarh/cover.JPG" alt="Chandigarh Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Chandigarh Tricity Facility Management, Administration & Procurement Leadership Award Summit</h2>
-                    <p>15th March 2024</p>
-                </div>
-                <a href="../Navbar/Events/Chandigarh.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Event Cover 4 Ahmedabad -->
-            <div class="event-cover relative">
-                <img src="../Images/Ahmedabad/cover.jpg" alt="Ahmedabad Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Gujarat Leadership Award Summit & Business Networking Conference</h2>
-                    <p>15 December 2023</p>
-                </div>
-                <a href="../Navbar/Events/Ahmedabad.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Event Cover 5 Pune -->
-            <div class="event-cover relative">
-                <img src="../Images/Pune/cover.JPG" alt="Pune Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Pune Leadership Award Summit & Business Networking Conference</h2>
-                    <p>19th October 2023</p>
-                </div>
-                <a href="../Navbar/Events/Pune.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Event Cover 6 Jaipur -->
-            <div class="event-cover relative">
-                <img src="../Images/Jaipur/cover.JPG" alt="Jaipur Event Cover" class="w-full h-64 object-cover">
-                <div class="event-info">
-                    <h2 class="text-xl font-semibold">Jaipur Leadership Award Summit & Business Networking Conference</h2>
-                    <p>6th August 2023</p>
-                </div>
-                <a href="../Navbar/Events/Jaipur.html" class="absolute inset-0"></a>
-            </div>
-
-            <!-- Add more events similarly -->
-
+    <!-- Events & Entertainments -->
+    <div class="py-8 bg-blue-100 text-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-blue-500 mb-4">Procon Events & Entertainment</h2>
+          <p class="text-lg text-gray-700">
+            Procon Events and Entertainment, an offshoot of the Procon Group, is an end-to-end event management company dedicated to making your corporate events a seamless experience. We cater to a wide range of events, including conferences, meetings, employee engagement activities, dealer meets  and RnR events.
+            <br><br>
+            Our specially dedicated team of professional event planners manages every aspect of your event, from ideation, planning, and execution to hotel booking, travel arrangements, event setup, and production. Whether it’s yoga sessions, fun football and cricket matches, self-defense workshops, canvas art workshops, Zumba sessions, or any other employee engagement activity, we've got it all covered.
+            <br><br>
+            With Procon Events and Entertainment, you can rest assured that your company’s events will be handled with the utmost care and professionalism.
+          </p>
         </div>
+      </div>
     </div>
-</div>
+
+
 
   <!-- LOGO AND SHORTCUT   -->
    <!-- Logo and Shortcuts Section -->
@@ -190,7 +112,7 @@
       <!-- Description Text -->
       <div class="text-center md:text-left">
         <p class="text-lg text-gray-300">
-          Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur possimus excepturi ea impedit nobis quos, at qui? Alias eum laudantium nemo ex amet quas totam iusto. Commodi repellendus sequi beatae cupiditate est rem molestias cumque voluptatum! Sunt temporibus quas earum nobis ea rerum optio vitae!
         </p>
       </div>
     </div>
@@ -205,7 +127,7 @@
           <li><a href="gallery.html" class="text-gray-300 hover:text-blue-500 hover-effect">Gallery</a></li>
           <li><a href="media.html" class="text-gray-300 hover:text-blue-500 hover-effect">Media Coverage</a></li>
           <li><a href="Events & Entertainments.html" class="text-gray-300 hover:text-blue-500 hover-effect">Events</a></li>
-          <li><a href="contact.html" class="text-gray-300 hover:text-blue-500 hover-effect">Contact</a></li>
+          <li><a href="Ncontact.html" class="text-gray-300 hover:text-blue-500 hover-effect">Contact</a></li>
         </ul>
       </div>
       
