@@ -68,11 +68,11 @@
       </nav>
 
   <!-- About Us Overview Section -->
-  <div class="pt-16 pb-8 bg-blue-100 text-gray-900">
+  <div class="pt-16 bg-blue-100 text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-          <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Events & Entertainments</h2>
+          <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Procon Events & Entertainments</h2>
         </div>
         <!-- <p class="text-xl pt-10 text-gray-700 leading-relaxed">
           Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
@@ -82,20 +82,49 @@
   </div>
 
     <!-- Events & Entertainments -->
-    <div class="py-8 bg-blue-100 text-gray-900">
+    <div class="pb-8 bg-blue-100 text-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold text-blue-500 mb-4">Procon Events & Entertainment</h2>
-          <p class="text-lg text-gray-700">
-            Procon Events and Entertainment, an offshoot of the Procon Group, is an end-to-end event management company dedicated to making your corporate events a seamless experience. We cater to a wide range of events, including conferences, meetings, employee engagement activities, dealer meets  and RnR events.
-            <br><br>
-            Our specially dedicated team of professional event planners manages every aspect of your event, from ideation, planning, and execution to hotel booking, travel arrangements, event setup, and production. Whether it’s yoga sessions, fun football and cricket matches, self-defense workshops, canvas art workshops, Zumba sessions, or any other employee engagement activity, we've got it all covered.
-            <br><br>
-            With Procon Events and Entertainment, you can rest assured that your company’s events will be handled with the utmost care and professionalism.
-          </p>
-        </div>
+          <div class="text-center">
+              <!-- Carousel Container -->
+              <div class="relative flex items-center justify-center">
+                  <!-- Carousel Items -->
+                  <div id="carousel" class="relative w-full max-w-3xl h-auto overflow-hidden rounded-lg border border-gray-300 shadow-lg">
+                    <div class="flex transition-transform duration-1000 ease-in-out" id="carousel-inner">
+                      <img src="../Images/Events/3.jpg" class="w-full object-cover" alt="Event 3">
+                      <img src="../Images/Events/2.jpg" class="w-full object-cover" alt="Event 2">
+                      <img src="../Images/Events/1.jpg" class="w-full object-cover" alt="Event 1">
+                    </div>
+                  </div>                  
+              </div>
+              <p class="mt-6 text-lg text-gray-700 space-y-4 leading-relaxed max-w-4xl mx-auto border border-gray-300 p-6 rounded-lg shadow-lg bg-white">
+                <span class="font-semibold text-gray-800">Procon Events and Entertainment</span>, an offshoot of the Procon Group, is an end-to-end event management company dedicated to making your corporate events a seamless experience. We cater to a wide range of events, including conferences, meetings, employee engagement activities, dealer meets, and RnR events.
+                <br>
+                <span class="block">Our specially dedicated team of professional event planners manages every aspect of your event, from ideation, planning, and execution to hotel booking, travel arrangements, event setup, and production.</span>
+                <br>
+                <span class="block">Whether it’s yoga sessions, fun football and cricket matches, self-defense workshops, canvas art workshops, Zumba sessions, or any other employee engagement activity, we've got it all covered.</span>
+                <br>
+                <span class="block font-semibold text-gray-800">With Procon Events and Entertainment, you can rest assured that your company’s events will be handled with the utmost care and professionalism.</span>
+            </p>            
+
+          </div>
       </div>
-    </div>
+  </div>
+
+  <!-- Carousel Auto-Slide Script -->
+  <script>
+    const carousel = document.getElementById('carousel-inner');
+    let currentIndex = 0;
+    const images = carousel.children;
+    const totalImages = images.length;
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(showNextImage, 5000);
+</script>
 
 
 
