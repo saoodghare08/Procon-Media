@@ -25,16 +25,51 @@
   </style>
 
 <style>
-  /* Marquee Animation */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); } /* Adjusted to match the width of the content */
-}
+  /* Default marquee settings for large screens */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-600%); } /* Adjusted for large screens */
+  }
 
-.animate-marquee {
-  animation: marquee 60s linear infinite; /* Increased duration for smoother scrolling */
-}
+  .animate-marquee {
+    animation: marquee 50s linear infinite;
+  }
 
+  /* Adjust marquee settings for medium screens */
+  @media (max-width: 1024px) {
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-800%); } /* Adjust for medium screens */
+    }
+
+    .animate-marquee {
+      animation: marquee 60s linear infinite;
+    }
+  }
+
+  /* Adjust marquee settings for small screens */
+  @media (max-width: 768px) {
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-1200%); } /* Adjust for small screens */
+    }
+
+    .animate-marquee {
+      animation: marquee 80s linear infinite; /* Slower scroll for small screens */
+    }
+  }
+
+  /* Further adjustments for very small screens */
+  @media (max-width: 480px) {
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-2000%); } /* Adjust for very small screens */
+    }
+
+    .animate-marquee {
+      animation: marquee 100s linear infinite;
+    }
+  }
 </style>
   
 </head>
