@@ -70,6 +70,41 @@
   }
 </style>
 
+<!-- CSS Styles -->
+<style>
+  .hero-content {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Shadow for pop effect */
+  }
+
+  /* Text Animation: Typewriter Effect */
+  .animate-typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }
+
+  /* Text Animation: Fade In */
+  .animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+
 </head>
 
 <body>
@@ -142,44 +177,45 @@
     });
   </script>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <!-- Carousel (SwiperJS) -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="Images/Home/1.jpg" alt="Event 1">
-        </div>
-        <div class="swiper-slide">
-          <img src="Images/Home/8.jpg" alt="Event 8">
-        </div>
-        <div class="swiper-slide">
-          <img src="Images/Home/9.jpg" alt="Event 9">
-        </div>
-        <!-- Add more slides as needed -->
+<!-- Hero Section -->
+<header class="relative w-full h-screen bg-cover bg-center">
+  <!-- Carousel (SwiperJS) -->
+  <div class="swiper-container w-full h-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="Images/Home/1.jpg" alt="Event 1" class="object-cover w-full h-full">
       </div>
+      <div class="swiper-slide">
+        <img src="Images/Home/8.jpg" alt="Event 8" class="object-cover w-full h-full">
+      </div>
+      <div class="swiper-slide">
+        <img src="Images/Home/9.jpg" alt="Event 9" class="object-cover w-full h-full">
+      </div>
+      <!-- Add more slides as needed -->
     </div>
+  </div>
 
-    <!-- Hero Content -->
-    <div class="hero-content flex items-center justify-center text-center text-white h-full">
-      <div class="p-8 bg-black bg-opacity-50 rounded-lg">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Procon Media</h1>
-        <p class="text-xl mb-6">Connecting Industry Leaders and Innovators</p>
-        <a href="Navbar/contact.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600">Get in Touch</a>
-      </div>
+  <!-- Hero Content -->
+  <div class="absolute inset-0 z-10 flex items-end justify-start p-6 sm:p-8 lg:p-10">
+    <div class="bg-black bg-opacity-50 shadow-lg rounded-lg text-white max-w-full lg:max-w-1/2 p-6">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 animate-fade-in">Welcome to Procon Media</h1>
+      <p class="text-sm sm:text-lg lg:text-xl mb-4 animate-typewriter">Connecting Industry Leaders and Innovators</p>
+      <a href="Navbar/contact.html" class="bg-blue-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg font-semibold hover:bg-blue-600">Get in Touch</a>
     </div>
-  </header>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      effect: 'cube',
-    });
-  </script>
+  </div>
+</header>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    effect: 'cube',
+  });
+</script>
 
   <!-- About Us Section -->
 <section class="py-16 bg-blue-100 bg-opacity-40">
