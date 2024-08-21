@@ -23,11 +23,19 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
     </style>
+    <style>
+      /* Graphical background for the entire page */
+      body {
+        background: url('../Images/bg4.jpg') no-repeat center center fixed, 
+                    linear-gradient(to bottom right, rgba(13, 27, 42, 0.8), rgba(0, 0, 128, 0.8));
+        background-size: cover;
+        color: #ffffff;
+        font-family: 'Arial', sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-blue-100 text-gray-900">
-    
-    <div class="bg-cover bg-center h-min" style="background-image: url('Images/bg1.jpg');">
-      <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+<body>
+  <nav id="navbar" class="bg-black bg-opacity-80 fixed w-full shadow-md z-20 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
@@ -38,12 +46,12 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a href="../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                <a href="media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
-                <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-                <a href="contact.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="../index.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="about.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="gallery.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="media.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
+                <a href="Events & Entertainments.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                <a href="contact.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
             <div class="-mr-2 flex md:hidden">
@@ -58,22 +66,20 @@
   
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
-          <a href="about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
-          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
-          <a href="media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Media Coverage</a>
-          <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
+          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Home</a>
+          <a href="about.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">About</a>
+          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Gallery</a>
+          <a href="media.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Media Coverage</a>
+          <a href="Events & Entertainments.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Events</a>
+          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Contact</a>
         </div>
       </nav>
 
   <!-- About Us Overview Section -->
-  <div class="pt-16 bg-blue-100 text-gray-900">
+<div class="pt-16 pb-8 text-gray-900 bg-blue-100 bg-opacity-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-          <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Procon Events & Entertainments</h2>
-        </div>
+        <h2 class="text-5xl font-bold text-blue-500 shadow-lg bg-blue-100 bg-opacity-60 p-6 rounded-xl">Procon Events & Entertainments</h2>
         <!-- <p class="text-xl pt-10 text-gray-700 leading-relaxed">
           Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
         </p> -->
@@ -82,7 +88,7 @@
   </div>
 
     <!-- Events & Entertainments -->
-    <div class="pb-8 bg-blue-100 text-gray-900">
+    <div class="py-8 bg-blue-100 bg-opacity-60 text-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center">
               <!-- Carousel Container -->
@@ -96,7 +102,7 @@
                     </div>
                   </div>                  
               </div>
-              <p class="mt-6 text-lg text-gray-700 space-y-4 leading-relaxed max-w-4xl mx-auto border border-gray-300 p-6 rounded-lg shadow-lg bg-white">
+              <p class="mt-6 text-lg text-gray-700 space-y-4 leading-relaxed max-w-4xl mx-auto border border-gray-300 p-6 rounded-lg shadow-lg bg-blue-100 bg-opacity-80">
                 <span class="font-semibold text-gray-800">Procon Events and Entertainment</span>, an offshoot of the Procon Group, is an end-to-end event management company dedicated to making your corporate events a seamless experience. We cater to a wide range of events, including conferences, meetings, employee engagement activities, dealer meets, and RnR events.
                 <br>
                 <span class="block">Our specially dedicated team of professional event planners manages every aspect of your event, from ideation, planning, and execution to hotel booking, travel arrangements, event setup, and production.</span>
@@ -141,7 +147,7 @@
       <!-- Description Text -->
       <div class="text-center md:text-left">
         <p class="text-lg text-gray-300">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur possimus excepturi ea impedit nobis quos, at qui? Alias eum laudantium nemo ex amet quas totam iusto. Commodi repellendus sequi beatae cupiditate est rem molestias cumque voluptatum! Sunt temporibus quas earum nobis ea rerum optio vitae!
+          Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
         </p>
       </div>
     </div>
@@ -156,7 +162,7 @@
           <li><a href="gallery.html" class="text-gray-300 hover:text-blue-500 hover-effect">Gallery</a></li>
           <li><a href="media.html" class="text-gray-300 hover:text-blue-500 hover-effect">Media Coverage</a></li>
           <li><a href="Events & Entertainments.html" class="text-gray-300 hover:text-blue-500 hover-effect">Events</a></li>
-          <li><a href="Ncontact.html" class="text-gray-300 hover:text-blue-500 hover-effect">Contact</a></li>
+          <li><a href="contact.html" class="text-gray-300 hover:text-blue-500 hover-effect">Contact</a></li>
         </ul>
       </div>
       

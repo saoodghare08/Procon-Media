@@ -52,11 +52,19 @@
             transform: translateY(0);
         }
     </style>
+    <style>
+      /* Graphical background for the entire page */
+      body {
+        background: url('../Images/bg4.jpg') no-repeat center center fixed, 
+                    linear-gradient(to bottom right, rgba(13, 27, 42, 0.8), rgba(0, 0, 128, 0.8));
+        background-size: cover;
+        color: #ffffff;
+        font-family: 'Arial', sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-blue-100 text-gray-900">
-    
-    <div class="bg-cover bg-center h-min" style="background-image: url('/Images/bg1.jpg');">
-      <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+  <body>
+    <nav id="navbar" class="bg-black bg-opacity-80 fixed w-full shadow-md z-20 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
@@ -67,12 +75,12 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a href="../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                <a href="media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
-                <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-                <a href="contact.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="../index.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="about.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="gallery.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="media.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
+                <a href="Events & Entertainments.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                <a href="contact.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
             <div class="-mr-2 flex md:hidden">
@@ -87,32 +95,30 @@
   
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
-          <a href="about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
-          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
-          <a href="media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Media Coverage</a>
-          <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
+          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Home</a>
+          <a href="about.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">About</a>
+          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Gallery</a>
+          <a href="media.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Media Coverage</a>
+          <a href="Events & Entertainments.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Events</a>
+          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Contact</a>
         </div>
       </nav>
 
       <!-- About Us Section -->
-  <div class="pt-16 pb-4 bg-white text-gray-900">
+  <div class="pt-16 pb-4 bg-blue-100 bg-opacity-40 text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-            <h1 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50 text-center">Event Gallery</h1>
-        </div>
+        <h2 class="text-6xl font-bold text-blue-500 shadow-lg bg-blue-100 bg-opacity-60 p-6 rounded-xl">Event Gallery</h2>
       </div>
     </div>
   </div>
 
    <!-- Gallery Section -->
-   <div class="py-16 bg-white">
+   <div class="py-16 bg-blue-100 bg-opacity-60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Event Cover 1 Rajasthan -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Rajasthan/cover.JPG" alt="Rajasthan Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Rajasthan Real Estate, Architecture, Corporate Leadership Conference & Award</h2>
@@ -122,7 +128,7 @@
             </div>
 
             <!-- Event Cover 2 Mumbai -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Mumbai/cover.JPG" alt="Mumbai Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Mumbai Workplace & Facility Management Conclave & Awards</h2>
@@ -132,7 +138,7 @@
             </div>
 
             <!-- Event Cover 3 Chandigarh -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Chandigarh/cover.JPG" alt="Chandigarh Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Chandigarh Tricity Facility Management, Administration & Procurement Leadership Award Summit</h2>
@@ -142,7 +148,7 @@
             </div>
 
             <!-- Event Cover 4 Ahmedabad -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Ahmedabad/cover.jpg" alt="Ahmedabad Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Gujarat Leadership Award Summit & Business Networking Conference</h2>
@@ -152,7 +158,7 @@
             </div>
 
             <!-- Event Cover 5 Pune -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Pune/cover.JPG" alt="Pune Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Pune Leadership Award Summit & Business Networking Conference</h2>
@@ -162,7 +168,7 @@
             </div>
 
             <!-- Event Cover 6 Jaipur -->
-            <div class="event-cover relative">
+            <div class="event-cover relative rounded-lg">
                 <img src="../Images/Jaipur/cover.JPG" alt="Jaipur Event Cover" class="w-full h-64 object-cover">
                 <div class="event-info">
                     <h2 class="text-xl font-semibold">Jaipur Leadership Award Summit & Business Networking Conference</h2>
@@ -190,7 +196,7 @@
       <!-- Description Text -->
       <div class="text-center md:text-left">
         <p class="text-lg text-gray-300">
-          Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
+          Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
         </p>
       </div>
     </div>

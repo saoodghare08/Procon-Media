@@ -26,10 +26,20 @@
             height: 100%;
         }
     </style>
+    <style>
+        /* Graphical background for the entire page */
+        body {
+          background: url('../Images/bg4.jpg') no-repeat center center fixed, 
+                      linear-gradient(to bottom right, rgba(13, 27, 42, 0.8), rgba(0, 0, 128, 0.8));
+          background-size: cover;
+          color: #ffffff;
+          font-family: 'Arial', sans-serif;
+        }
+      </style>
 </head>
 
-<body class="bg-blue-100 text-gray-900">
-    <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+<body>
+    <nav id="navbar" class="bg-black bg-opacity-80 fixed w-full shadow-md z-20 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -39,13 +49,13 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                        <a href="media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
-                        <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-                        <a href="contact.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
+                        <a href="../index.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="about.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="gallery.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                        <a href="media.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
+                        <a href="Events & Entertainments.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                        <a href="contact.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                      </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
                     <button id="nav-toggle" class="bg-blue-500 text-white p-2 rounded-md focus:outline-none">
@@ -59,22 +69,22 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
-            <a href="about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
-            <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
-            <a href="media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Media Coverage</a>
-            <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-            <a href="contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
-        </div>
+            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">About</a>
+            <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Gallery</a>
+            <a href="media.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Media Coverage</a>
+            <a href="Events & Entertainments.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Events</a>
+            <a href="contact.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Contact</a>
+          </div>
     </nav>
 
     <!-- Media Coverage Section -->
-    <div class="py-16 bg-white text-gray-900">
+<div class="pt-16 pb-8 text-gray-900 bg-blue-100 bg-opacity-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min text-center mb-10">
-                <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Media Coverage</h2>
+            <div class="text-center mb-10">
+                <h2 class="text-5xl font-bold text-blue-500 shadow-lg bg-blue-100 bg-opacity-60 p-6 rounded-xl">Media Coverage</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-blue-100 p-8 rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-blue-100 bg-opacity-60 p-8 rounded-lg">
                 <!-- YouTube Video 1 -->
                 <div class="video-container mb-8">
                     <iframe src="https://www.youtube.com/embed/mPhQgQXoZNw" title="Business Talk कैसे बढ़े व्यापार, बिजनेस नेटवर्किंग मीटिंग में हुआ कारोबारी मिलन" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -162,9 +172,9 @@
         </div>
         <!-- Description Text -->
         <div class="text-center md:text-left">
-          <p class="text-lg text-gray-300">
-            Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
-          </p>
+            <p class="text-lg text-gray-300">
+                Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
+              </p>
         </div>
       </div>
       

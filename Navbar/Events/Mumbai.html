@@ -63,11 +63,19 @@
             background: #f1f1f1;
         }
     </style>
+        <style>
+          /* Graphical background for the entire page */
+          body {
+            background: url('../../Images/bg4.jpg') no-repeat center center fixed, 
+                        linear-gradient(to bottom right, rgba(13, 27, 42, 0.8), rgba(0, 0, 128, 0.8));
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+          }
+        </style>
 </head>
-<body class="bg-blue-100 text-gray-900">
-    
-    <div class="bg-cover bg-center h-min">
-      <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+<body>
+  <nav id="navbar" class="bg-black bg-opacity-80 fixed w-full shadow-md z-20 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
@@ -78,14 +86,13 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a href="../../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="../../Navbar/about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="../../Navbar/gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                <a href="../../Navbar/media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
-                <a href="../../Navbar/Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-                <a href="../../Navbar/contact.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="../../index.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="../../Navbar/about.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="../../Navbar/gallery.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="../../Navbar/media.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
+                <a href="../../Navbar/Events & Entertainments.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                <a href="../../Navbar/contact.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
-            </div>
             <div class="-mr-2 flex md:hidden">
               <button id="nav-toggle" class="bg-blue-500 text-white p-2 rounded-md focus:outline-none">
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,32 +105,30 @@
   
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-          <a href="../../index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
-          <a href="../../Navbar/about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
-          <a href="../../Navbar/gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
-          <a href="../../Navbar/media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Media Coverage</a>
-          <a href="../../Navbar/Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-          <a href="../../Navbar/contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
+          <a href="../../index.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Home</a>
+          <a href="../../Navbar/about.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">About</a>
+          <a href="../../Navbar/gallery.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Gallery</a>
+          <a href="../../Navbar/media.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Media Coverage</a>
+          <a href="../../Navbar/Events & Entertainments.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Events</a>
+          <a href="../../Navbar/contact.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Contact</a>
         </div>
       </nav>
 
       <!-- About Us Section -->
-      <div class="pt-16 pb-4 bg-white text-gray-900">
+      <div class="pt-16 pb-4 bg-blue-100 bg-opacity-40 text-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10">
-            <div style="background-image: url('../../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-                <h1 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50 text-center">Event Gallery</h1>
-            </div>
+            <h2 class="text-6xl font-bold text-blue-500 shadow-lg bg-blue-100 bg-opacity-60 p-6 rounded-xl">Event Gallery</h2>
           </div>
         </div>
       </div>
 
 
       <!-- Carousel Section -->
-      <div class="pb-16 bg-white">
+      <div class="pb-16 bg-blue-100 bg-opacity-60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-8 flex items-center justify-between">
-                <div class="text-xl font-bold pl-5">Mumbai Workplace & Facility Management Conclave & Awards</div>
+                <div class="text-xl font-bold pl-5 text-black">Mumbai Workplace & Facility Management Conclave & Awards</div>
                 <div>
                 <button id="grid-view" class="carousel-button p-2 rounded-full bg-gray-200 hover:bg-gray-300">
                     <i class="fas fa-th"></i>
@@ -162,7 +167,7 @@
             </div>
             <div class="text-center md:text-left">
               <p class="text-lg text-gray-300">
-                Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
+                Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
               </p>
             </div>
           </div>

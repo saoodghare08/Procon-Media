@@ -7,9 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body class="bg-blue-100 text-gray-900">
-    <nav id="navbar" class="bg-blue-100 bg-opacity-80 fixed w-full shadow-md z-10 navbar-visible">
+    <style>
+      .hover-effect:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+      /* Navbar transition and visibility */
+      .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .navbar-visible {
+        transform: translateY(0);
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    </style>
+    <style>
+      /* Graphical background for the entire page */
+      body {
+        background: url('../Images/bg4.jpg') no-repeat center center fixed, 
+                    linear-gradient(to bottom right, rgba(13, 27, 42, 0.8), rgba(0, 0, 128, 0.8));
+        background-size: cover;
+        color: #ffffff;
+        font-family: 'Arial', sans-serif;
+      }
+    </style>
+  </head>
+<body>
+  <nav id="navbar" class="bg-black bg-opacity-80 fixed w-full shadow-md z-20 navbar-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
@@ -19,12 +45,12 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a href="../index.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="gallery.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
-                <a href="media.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
-                <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-                <a href="contact.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="../index.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="about.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="gallery.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                <a href="media.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Media Coverage</a>
+                <a href="Events & Entertainments.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
+                <a href="contact.html" class="text-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
             <div class="-mr-2 flex md:hidden">
@@ -39,22 +65,20 @@
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Home</a>
-          <a href="about.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">About</a>
-          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Gallery</a>
-          <a href="media.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Media Coverage</a>
-          <a href="Events & Entertainments.html" class="text-gray-800 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Events</a>
-          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Contact</a>
+          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Home</a>
+          <a href="about.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">About</a>
+          <a href="gallery.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Gallery</a>
+          <a href="media.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Media Coverage</a>
+          <a href="Events & Entertainments.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Events</a>
+          <a href="contact.html" class="block px-4 py-2 text-sm text-gray-50 hover:bg-gray-200">Contact</a>
         </div>
       </nav>
       <!-- Contact Us section -->
-      <div class="pt-16 pb-2 text-gray-900">
+      <div class="pt-16 pb-8 text-gray-900 bg-blue-100 bg-opacity-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10">
-            <div style="background-image: url('../Images/bg1.jpg');" class="bg-cover bg-blue-100 bg-center h-min">
-              <h2 class="text-3xl font-bold text-blue-500 mb-6 p-6 bg-black bg-opacity-50">Contact Us</h2>
-            </div>
-            <p class="text-2xl font-bold pt-2
+              <h2 class="text-6xl font-bold text-blue-500 shadow-lg bg-blue-100 bg-opacity-60 p-6 rounded-xl">Contact Us</h2>
+            <p class="text-2xl font-bold pt-10
              text-gray-700 leading-relaxed">
                 Get in touch with us for any inquiries, partnerships, or registrations.
             </p>
@@ -63,17 +87,18 @@
       </div>
 
       <!-- Office Address Section -->
-    <section class="py-8 bg-blue-100">
+    <section class="py-8 bg-blue-100 bg-opacity-60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-blue-500 mb-8">Our Office Address</h2>
-            <p class="text-lg text-gray-700 mb-6">JN4/9/7 Sector 9, Vashi, Navi Mumbai, Maharashtra, 400703</p>
+            <p class="text-lg text-gray-700">Little Flower Building, Sector 9,</p>
+            <p class="text-lg text-gray-700 mb-6">Vashi, Navi Mumbai, 400703</p>
             <p class="text-lg text-gray-700">Email: <a href="mailto:info@proconmedia.in" class="text-blue-500 hover:underline">info@proconmedia.in</a></p>
             <p class="text-lg text-gray-700">Phone: <a href="tel:+917021448655" class="text-blue-500 hover:underline">+91 7021448655</a></p>
         </div>
     </section>
 
     <!-- Contact Points Section -->
-    <section class="py-8 bg-white">
+    <section class="py-8 bg-blue-100 bg-opacity-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-blue-500 mb-6">Contact Points</h2>
@@ -81,10 +106,10 @@
             </div>
             <div class="grid gap-8 md:grid-cols-3">
               <!-- Individual Contact Cards -->
-              <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="bg-blue-100 bg-opacity-80 p-6 rounded-lg shadow-lg">
                   <h3 class="text-xl font-semibold text-blue-400 mb-2">Conference Registration & Nomination</h3>
                   <p class="text-gray-700 mb-4">For any queries related to conference registration and nominations, please contact:</p>
-                  <p class="font-semibold">Akshat Ojha</p>
+                  <p class="text-black font-semibold">Akshat Ojha</p>
                   <p>
                       <a href="mailto:akshat@proconmedia.in" class="text-blue-500 hover:underline">akshat@proconmedia.in</a>
                   </p>
@@ -94,10 +119,10 @@
                       </a>
                   </p>
               </div>
-              <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="bg-blue-100 bg-opacity-80 p-6 rounded-lg shadow-lg">
                   <h3 class="text-xl font-semibold text-blue-400 mb-2">Partnership Inquiries</h3>
                   <p class="text-gray-700 mb-4">For partnership opportunities, reach out to:</p>
-                  <p class="font-semibold">Kavita Gupta</p>
+                  <p class="text-black font-semibold">Kavita Gupta</p>
                   <p>
                       <a href="mailto:kavita@proconmedia.in" class="text-blue-500 hover:underline">kavita@proconmedia.in</a>
                   </p>
@@ -107,10 +132,10 @@
                       </a>
                   </p>
               </div>
-              <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="bg-blue-100 bg-opacity-80 p-6 rounded-lg shadow-lg">
                   <h3 class="text-xl font-semibold text-blue-400 mb-2">General Enquiries</h3>
                   <p class="text-gray-700 mb-4">For any other inquiries, contact:</p>
-                  <p class="font-semibold">Siddhant Mishra</p>
+                  <p class="text-black font-semibold">Siddhant Mishra</p>
                   <p>
                       <a href="mailto:siddhant@proconmedia.in" class="text-blue-500 hover:underline">siddhant@proconmedia.in</a>
                   </p>
@@ -126,12 +151,12 @@
     </section>
 
       <!-- NOMINATION FORM -->
-  <div class="py-16 bg-blue-100 text-gray-900">
+  <div class="py-8 bg-blue-100 bg-opacity-60 text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <h2 class="text-3xl font-bold text-blue-500 mb-6">Nomination Form</h2>
       </div>
-      <form action="#" method="post" class="bg-white p-8 rounded-lg shadow-lg">
+      <form action="#" method="post" class="bg-blue-100 bg-opacity-80 p-8 rounded-lg shadow-lg">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <!-- Your Information -->
           <div class="flex flex-col">
@@ -193,7 +218,7 @@
         </div>
         <div class="text-center md:text-left">
           <p class="text-lg text-gray-300">
-            Our conferences are designed to bring together top professionals from various industries, creating an atmosphere of collaboration, learning, and networking. Our business networking conferences offer attendees the opportunity to expand their professional network, learn from industry leaders, and stay up-to-date on the latest trends and innovations in their field.
+            Welcome to Procon Media, a leading organizer of Business Networking Conferences, Exhibitions, and Events. We specialize in connecting industry leaders from Workplace, Administration and Facilities, Real Estate, Architecture, Infrastructure, and Sustainability sectors. Top leaders from various sectors come together for specially curated events where they engage in panel discussions, fireside chats, and debates on topics that are relevant, trending, and important. Our platform also enables vendors and businesses from diverse sectors to meet top corporates under one roof on one day, fostering valuable connections and business opportunities.
           </p>
         </div>
       </div>
