@@ -108,8 +108,8 @@
             <h2 class="text-3xl font-bold text-blue-500 mb-8">Our Office Address</h2>
             <p class="text-lg text-gray-700">Little Flower Building, Sector 9,</p>
             <p class="text-lg text-gray-700 mb-6">Vashi, Navi Mumbai, 400703</p>
-            <p class="text-lg text-gray-700">Email: <a href="mailto:info@proconmedia.in" class="text-blue-500 hover:underline">info@proconmedia.in</a></p>
-            <p class="text-lg text-gray-700">Phone: <a href="tel:+917021448655" class="text-blue-500 hover:underline">+91 7021448655</a></p>
+            <p class="text-lg text-gray-700">Email: <a href="mailto:kavita@proconmedia.in" class="text-blue-500 hover:underline">kavita@proconmedia.in</a> / <a href="mailto:siddhant@proconmedia.in" class="text-blue-500 hover:underline">siddhant@proconmedia.in</a></p>
+            <p class="text-lg text-gray-700">Phone: <a href="tel:+917021448655" class="text-blue-500 hover:underline">+91 7021448655</a> / <a href="tel:+919172852743" class="text-blue-500 hover:underline">+91 9172852743</a></p>
         </div>
     </section>
 
@@ -269,11 +269,36 @@
         </div>
       </div>
       <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-2 ubuntu-bold">
-        Designed by <a href="https://saoodghare08.github.io/MyPortfolio/" class="ubuntu-bold-italic text-blue-500">Saood</a>
+        Designed & Developed by <!-- Trigger Link -->
+        <a href="#" class="ubuntu-bold-italic text-blue-500 relative" onclick="toggleMenu(event)">
+            Ailaan Digitals
+        </a>
+        <!-- Popup Menu -->
+        <div id="popupMenu" class="hidden absolute bottom-10 left-1/2 bg-white shadow-lg rounded-md p-4 z-50 w-max">
+          <ul>
+              <li class="mb-2"><a href="https://www.instagram.com/marketingmavens5/" class="text-blue-500 hover:text-blue-700">Our Portfolio</a></li>
+              <li><a href="https://saoodghare08.github.io/MyPortfolio/" class="text-blue-500 hover:text-blue-700">Developer's Portfolio</a></li>
+          </ul>
+      </div>
       </div>
     </div>
   </div>
 
+  <script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        const popupMenu = document.getElementById('popupMenu');
+        popupMenu.classList.toggle('hidden');
+    }
+  
+    // Optional: Close the menu when clicking outside
+    window.addEventListener('click', function(event) {
+        const popupMenu = document.getElementById('popupMenu');
+        if (!popupMenu.contains(event.target) && event.target.closest('a') === null) {
+            popupMenu.classList.add('hidden');
+        }
+    });
+  </script>
   <script>
     const navToggle = document.getElementById('nav-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
