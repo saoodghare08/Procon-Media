@@ -172,56 +172,84 @@
       <div class="text-center mb-10">
         <h2 class="text-3xl font-bold text-blue-500 mb-6">Nomination Form</h2>
       </div>
-      <form action="#" method="post" class="bg-blue-100 bg-opacity-80 p-8 rounded-lg shadow-lg">
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxOzetnoObASgfsjTwBU06f2MptNsk3FzmQskFgxwaxkm_G0K8jlvw1XRh0WCoXVuXY/exec" method="post" class="bg-blue-100 bg-opacity-80 p-8 rounded-lg shadow-lg">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <!-- Your Information -->
-          <div class="flex flex-col">
-            <label for="your-name" class="text-gray-700 mb-2">Your Name (*)</label>
-            <input type="text" id="your-name" name="your-name" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="your-email" class="text-gray-700 mb-2">Your Email (*)</label>
-            <input type="email" id="your-email" name="your-email" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="phone-number" class="text-gray-700 mb-2">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone-number" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="city" class="text-gray-700 mb-2">City</label>
-            <input type="text" id="city" name="city" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="company" class="text-gray-700 mb-2">Company Name & Designation</label>
-            <input type="text" id="company" name="company" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="nominee-name" class="text-gray-700 mb-2">Name of the person you are Nominating (*)</label>
-            <input type="text" id="nominee-name" name="nominee-name" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="nominee-email" class="text-gray-700 mb-2">Email (*)</label>
-            <input type="email" id="nominee-email" name="nominee-email" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="nominee-phone" class="text-gray-700 mb-2">Phone Number</label>
-            <input type="tel" id="nominee-phone" name="nominee-phone" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="nominee-city" class="text-gray-700 mb-2">City</label>
-            <input type="text" id="nominee-city" name="nominee-city" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex flex-col">
-            <label for="nominee-company" class="text-gray-700 mb-2">Company Name & Designation</label>
-            <input type="text" id="nominee-company" name="nominee-company" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
+            <!-- Your Information -->
+            <div class="flex flex-col">
+                <label for="your-name" class="text-gray-700 mb-2">Your Name (*)</label>
+                <input type="text" id="your-name" name="your-name" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="your-email" class="text-gray-700 mb-2">Your Email (*)</label>
+                <input type="email" id="your-email" name="your-email" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="phone-number" class="text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="city" class="text-gray-700 mb-2">City</label>
+                <input type="text" id="city" name="city" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="company" class="text-gray-700 mb-2">Company Name & Designation</label>
+                <input type="text" id="company" name="company" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="nominee-name" class="text-gray-700 mb-2">Name of the person you are Nominating (*)</label>
+                <input type="text" id="nominee-name" name="nominee-name" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="nominee-email" class="text-gray-700 mb-2">Email (*)</label>
+                <input type="email" id="nominee-email" name="nominee-email" required class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="nominee-phone" class="text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="nominee-phone" name="nominee-phone" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="nominee-city" class="text-gray-700 mb-2">City</label>
+                <input type="text" id="nominee-city" name="nominee-city" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="nominee-company" class="text-gray-700 mb-2">Company Name & Designation</label>
+                <input type="text" id="nominee-company" name="nominee-company" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
         </div>
         <div class="mt-8 flex justify-center">
-          <button type="submit" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300">
-            Submit
-          </button>
+            <button type="submit" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300">
+                Submit
+            </button>
         </div>
-      </form>
+    </form>
+    
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        // Create a FormData object from the form
+        var formData = new FormData(this);
+    
+        // Use fetch to send the form data to the Google Apps Script Web App
+        fetch('https://script.google.com/macros/s/AKfycbxOzetnoObASgfsjTwBU06f2MptNsk3FzmQskFgxwaxkm_G0K8jlvw1XRh0WCoXVuXY/exec', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            // Show the popup message
+            alert('Your submission was successful!');
+            
+            // Optionally, clear the form
+            this.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error with your submission. Please try again.');
+        });
+    });
+    </script>
+    
     </div>
   </div>
 
