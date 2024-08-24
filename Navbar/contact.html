@@ -223,35 +223,7 @@
         </div>
     </form>
     
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-  
-        const formData = new FormData(e.target);
-        const data = new URLSearchParams();
-  
-        formData.forEach((value, key) => {
-          data.append(key, value);
-        });
-  
-        fetch('https://script.google.com/macros/s/AKfycbynbkWwJQ2sdYuoFVQkfpYJT_IRu_n6FQOJWSVJ5IqyDwstu6TWX1M5q1oqG_lPJEmq/exec', {
-          method: 'POST',
-          body: data,
-        })
-        .then(response => response.json())
-        .then(result => {
-          if (result.status === 'success') {
-            alert('Submission Successful!');
-          } else {
-            alert('Error: ' + result.message);
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('There was a problem with the submission.');
-        });
-      });
-    </script>
+
     
     </div>
   </div>
@@ -358,5 +330,35 @@
     });
   </script>
     
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+  
+        const formData = new FormData(e.target);
+        const data = new URLSearchParams();
+  
+        formData.forEach((value, key) => {
+          data.append(key, value);
+        });
+  
+        fetch('https://script.google.com/macros/s/AKfycbynbkWwJQ2sdYuoFVQkfpYJT_IRu_n6FQOJWSVJ5IqyDwstu6TWX1M5q1oqG_lPJEmq/exec', {
+          method: 'POST',
+          body: data,
+        })
+        .then(response => response.json())
+        .then(result => {
+          if (result.status === 'success') {
+            alert('Submission Successful!');
+          } else {
+            alert('Error: ' + result.message);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('There was a problem with the submission.');
+        });
+      });
+    </script>
 </body>
 </html>
